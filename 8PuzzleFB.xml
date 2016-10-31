@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1477888359000" analysisTimestamp="1477904638025" release="">
+  <Project projectName="8Puzzle">
+    <Jar>/home/teocci/Yandex.Disk/Coursera/Algorithms/Week 4/8Puzzle/out</Jar>
+    <AuxClasspathEntry>/home/teocci/Yandex.Disk/Coursera/Algorithms/Week 4/8Puzzle/lib/algs4.jar</AuxClasspathEntry>
+  </Project>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" rank="14" abbrev="HE" category="BAD_PRACTICE">
+    <Class classname="Board">
+      <SourceLine classname="Board" sourcefile="Board.java" sourcepath="Board.java"/>
+    </Class>
+    <Method classname="Board" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false">
+      <SourceLine classname="Board" start="111" end="129" startBytecode="0" endBytecode="249" sourcefile="Board.java" sourcepath="Board.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE">
+    <Class classname="Solver$SearchNode">
+      <SourceLine classname="Solver$SearchNode" sourcefile="Solver.java" sourcepath="Solver.java"/>
+    </Class>
+    <Method classname="Solver$SearchNode" name="compareTo" signature="(LSolver$SearchNode;)I" isStatic="false">
+      <SourceLine classname="Solver$SearchNode" start="131" end="139" startBytecode="0" endBytecode="133" sourcefile="Solver.java" sourcepath="Solver.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="Solver$SearchNode">
+      <SourceLine classname="Solver$SearchNode" start="103" end="139" sourcefile="Solver.java" sourcepath="Solver.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 31 Oct 2016 13:32:39 +0900" total_classes="3" referenced_classes="20" total_bugs="3" total_size="231" num_packages="1" java_version="1.8.0_111" vm_version="25.111-b14" cpu_seconds="11.77" clock_seconds="911.87" peak_mbytes="209.31" alloc_mbytes="683.00" gc_seconds="0.11" priority_2="2" priority_1="1">
+    <PackageStats package="" total_bugs="3" total_types="3" total_size="231" priority_2="2" priority_1="1">
+      <ClassStats class="Board" sourceFile="Board.java" interface="false" size="129" bugs="1" priority_1="1"/>
+      <ClassStats class="Solver" sourceFile="Solver.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="Solver$SearchNode" sourceFile="Solver.java" interface="false" size="39" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.FindBugs2" totalMilliseconds="404" invocations="2" avgMicrosecondsPerInvocation="202012" maxMicrosecondsPerInvocation="244015" standardDeviationMircosecondsPerInvocation="42004"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="168" invocations="38" avgMicrosecondsPerInvocation="4421" maxMicrosecondsPerInvocation="20001" standardDeviationMircosecondsPerInvocation="2561"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="92" invocations="14" avgMicrosecondsPerInvocation="6571" maxMicrosecondsPerInvocation="20001" standardDeviationMircosecondsPerInvocation="4686"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="80" invocations="10" avgMicrosecondsPerInvocation="8000" maxMicrosecondsPerInvocation="32002" standardDeviationMircosecondsPerInvocation="8391"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="52" invocations="7" avgMicrosecondsPerInvocation="7429" maxMicrosecondsPerInvocation="16001" standardDeviationMircosecondsPerInvocation="4499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="52" invocations="10" avgMicrosecondsPerInvocation="5200" maxMicrosecondsPerInvocation="16001" standardDeviationMircosecondsPerInvocation="3600"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="40" invocations="10" avgMicrosecondsPerInvocation="4000" maxMicrosecondsPerInvocation="4000" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="40" invocations="7" avgMicrosecondsPerInvocation="5714" maxMicrosecondsPerInvocation="8000" standardDeviationMircosecondsPerInvocation="1980"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="40" invocations="3" avgMicrosecondsPerInvocation="13334" maxMicrosecondsPerInvocation="32002" standardDeviationMircosecondsPerInvocation="13200"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="40" invocations="8" avgMicrosecondsPerInvocation="5000" maxMicrosecondsPerInvocation="8000" standardDeviationMircosecondsPerInvocation="1732"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="36" invocations="9" avgMicrosecondsPerInvocation="4000" maxMicrosecondsPerInvocation="4000" standardDeviationMircosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="36" invocations="7" avgMicrosecondsPerInvocation="5143" maxMicrosecondsPerInvocation="8000" standardDeviationMircosecondsPerInvocation="1806"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="28" invocations="4" avgMicrosecondsPerInvocation="7000" maxMicrosecondsPerInvocation="16001" standardDeviationMircosecondsPerInvocation="5196"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
